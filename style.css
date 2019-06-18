@@ -1,0 +1,141 @@
+html {
+  background-color: #fefefe;
+  color: #111;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .5fr 4fr 1fr;
+  grid-row-gap: 0rem;
+}
+
+#outputContainer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+#output {
+  font-size: 5rem;
+  text-align: center;  
+}
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+  color: #111;
+  background: #fefefe;
+  padding: 10px 20px 10px 20px;
+  margin: .5rem;
+  border: solid #111 1px;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+button:hover {
+  background: #111;
+  color: #fefefe;
+  border: solid #111 1px;
+  text-decoration: none;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #fefefe; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border: 1px solid #111;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 0.7; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #111; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #111; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.sliders {
+  display: grid;
+  grid-template-columns: .8fr;
+  grid-template-rows: .5fr 1fr .5fr 1fr .5fr 1fr;
+  grid-row-gap: .5rem; 
+  justify-content: center;
+  padding: 1rem 0;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+
+.blink {
+  background-color: rgb(192, 81, 81);
+}
+
+/* Media Queries */
+@media screen and (min-width: 500px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-rows: 2fr 3fr 1fr;
+    grid-row-gap: 1rem;
+  }
+
+  #output {
+    font-size: 6rem;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-rows: 2fr 3fr 1fr;
+    grid-row-gap: 1rem;
+  }
+
+  #output {
+    font-size: 8rem;
+  }
+}
