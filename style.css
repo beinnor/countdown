@@ -46,7 +46,7 @@ button {
   font-size: 2rem;
 }
 
-button:hover {
+button:hover, button:active {
   background: #111;
   color: #fefefe;
   border: solid #111 1px;
